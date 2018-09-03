@@ -320,11 +320,9 @@
 </head>
 
 <body>
-        <audio id="birAudio" autoplay loop>
+        <audio id="birAudio" loop>
                 <source src="audios/birthday-song.mp3" type="audio/mpeg" />
             </audio>
-    
-    <audio src="audios/birthday-song.mp3" autoplay loop></audio>
     <div class="marque-ctnr">
         <marquee behavior="scroll">
             <h1>Happy Birthday to Rajini... Many Many Happy Returns of the Day Rajini.....</h1>
@@ -336,15 +334,23 @@
         <img src="pics/birthday3.jpg" alt="" width="100%">
     </div>
     <script>
+        $(document).ready(function(){
+           
+            setTimeout(function(){
+                console.log('w')
+                audioPlay();
+            },1000)
+        slideShow();
+        })
         function slideShow() {
             $('#fade').cycle();
         }
+        
         function audioPlay(){
             var audioElement = document.getElementById('birAudio');
             audioElement.play();
         }
-        audioPlay();
-        slideShow();
+       
     </script>
 </body>
 
