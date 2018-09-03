@@ -334,12 +334,12 @@
         <img src="pics/birthday3.jpg" alt="" width="100%">
     </div>
     <script>
-        window.onload=function(){
+       window.addEventListener('touchstart', function(){
             setTimeout(function(){
                 console.log('w1')
                 audioPlay();
             },1000);
-        }
+        });
         $(document).ready(function(){
            
             setTimeout(function(){
