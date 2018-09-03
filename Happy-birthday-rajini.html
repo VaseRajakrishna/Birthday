@@ -320,6 +320,10 @@
 </head>
 
 <body>
+        <audio id="birAudio" autoplay loop>
+                <source src="audios/birthday-song.mp3" type="audio/mpeg" />
+            </audio>
+    
     <audio src="audios/birthday-song.mp3" autoplay loop></audio>
     <div class="marque-ctnr">
         <marquee behavior="scroll">
@@ -335,6 +339,11 @@
         function slideShow() {
             $('#fade').cycle();
         }
+        function audioPlay(){
+            var audioElement = document.getElementById('birAudio');
+            audioElement.play();
+        }
+        audioPlay();
         slideShow();
     </script>
 </body>
