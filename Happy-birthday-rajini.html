@@ -334,12 +334,18 @@
         <img src="pics/birthday3.jpg" alt="" width="100%">
     </div>
     <script>
+        window.onload=function(){
+            setTimeout(function(){
+                console.log('w1')
+                audioPlay();
+            },1000);
+        }
         $(document).ready(function(){
            
             setTimeout(function(){
                 console.log('w')
                 audioPlay();
-            },1000)
+            },1000);
         slideShow();
         })
         function slideShow() {
