@@ -332,19 +332,20 @@
     </audio>
 
     <div class="marque-ctnr" style="text-align:center;">
-        <img src="pics/text1.gif" alt="Happy Birthday Mounika" style="max-width:100%;margin:0 auto;">
+        <img src="pics/text1.gif" alt="Happy Birthday Mounika" style="max-width:100%;margin:0 auto;" class="bannar">
     </div>
     <div id="fade" class="pics stl-slider-ctnr container no-padding" style="position: relative;">
             <img src="pics/m2.png" alt="" width="100%">
         <img src="pics/m1.png" alt="" width="100%">
         <img src="pics/m4.png" alt="" width="100%">
+        <img src="pics/m6.png" alt="" width="100%">
+        <img src="pics/m5.png" alt="" width="100%">
         <img src="pics/m3.png" alt="" width="100%">
         
     </div>
     <script>
         window.addEventListener('touchstart', function () {
             setTimeout(function () {
-                console.log('w1')
                 audioPlay();
             }, 1000);
         });
@@ -355,7 +356,16 @@
                 audioPlay();
             }, 1000);
             slideShow();
-        })
+            var x=1;
+			setInterval(function(){
+				x++;
+			if(x>5){
+				x=1;
+			}
+			 $('.bannar').attr('src','pics/text'+ x +'.gif');
+			 console.log(x);
+			},5000);
+        });
         function slideShow() {
             $('#fade').cycle();
         }
