@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Happy Birthday Mounika</title>
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/animation.js"></script>
 
@@ -300,6 +300,17 @@
             background: #e62739;
             color: #ffddae;
         }
+        .text-ctnr{
+            padding: 20px;
+    background: rgba(255, 255, 255, 0.39);
+    font-size: 16px;
+    box-shadow: inset 0px 1px 9px 5px rgba(255, 255, 255, 0.8);
+        }
+        .text-ctnr p{
+            font-size: 28px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-shadow: 4px 6px 30px rgba(255, 255, 255, 0.91);
+        }
 
         @media only screen and (-webkit-min-device-pixel-ratio:1.5),
         only screen and (min--moz-device-pixel-ratio:1.5),
@@ -338,13 +349,16 @@
         <img src="pics/text1.gif" alt="Happy Birthday Mounika" style="max-width:100%;margin:0 auto;" class="bannar">
     </div>
     <div id="fade" class="pics stl-slider-ctnr container no-padding" style="position: relative;">
-            <img src="pics/m2.png" alt="" width="100%">
+        <img src="pics/m2.png" alt="" width="100%">
         <img src="pics/m1.png" alt="" width="100%">
         <img src="pics/m4.png" alt="" width="100%">
         <img src="pics/m6.png" alt="" width="100%">
         <img src="pics/m5.png" alt="" width="100%">
         <img src="pics/m3.png" alt="" width="100%">
-        
+
+    </div>
+    <div class="text-ctnr">
+        <p>Happy birthday! On your special day and all year-round, enjoy whatever you want most from life. </p>
     </div>
     <script>
         window.addEventListener('touchstart', function () {
@@ -359,15 +373,15 @@
                 audioPlay();
             }, 1000);
             slideShow();
-            var x=1;
-			setInterval(function(){
-				x++;
-			if(x>6){
-				x=1;
-			}
-			 $('.bannar').attr('src','pics/text'+ x +'.gif');
-			 console.log(x);
-			},5000);
+            var x = 1;
+            setInterval(function () {
+                x++;
+                if (x > 6) {
+                    x = 1;
+                }
+                $('.bannar').attr('src', 'pics/text' + x + '.gif');
+                console.log(x);
+            }, 5000);
         });
         function slideShow() {
             $('#fade').cycle();
